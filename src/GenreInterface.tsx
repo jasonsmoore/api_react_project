@@ -1,9 +1,13 @@
-interface Genre {
-    id: number
-    name: string
+interface GenreReponse {
+   results: Genre[]
 }
 
-export default Genre;
+export interface Genre {
+    "id": 28,
+    "name": "Action"
+}
+
+export default GenreReponse;
 
 
 // link for genre id/name ref

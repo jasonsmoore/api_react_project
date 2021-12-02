@@ -19,7 +19,13 @@ function Home() {
                 </label>
                 <label>
                     <strong> Genre: </strong>
-                    <input />
+                    <select id='genres' name='genres'>
+                        <option>Action</option>
+                        <option>Adventure</option>
+                        <option>Animation</option>
+                        <option>Comedy</option>
+                        <option>Crime</option>
+                    </select>
                 </label>
                 <label>
                     <strong> Release Date: </strong>
