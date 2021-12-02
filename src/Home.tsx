@@ -1,18 +1,17 @@
 import { Link } from "react-router-dom";
-import GetMovies from "./GetMovies";
 import { useState } from "react";
+import GetMovies from "./GetMovies";
 import MovieResponse from "./MovieInterface";
 
 function Home() {
     const [date, getDate] = useState('')
-
     return (
         <div>
             <Link to='/favorite-bacon'>Favorite Bacon</Link>
             <h1>Bacon Search!</h1>
             <form className='searchTitle' onSubmit={(e) => {
                 e.preventDefault()
-                GetMovies()
+                GetMovies(date)
             }}>
                 <label>
                     <strong> Title: </strong>
