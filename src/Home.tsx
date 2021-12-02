@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import GetMovies from "./GetMovies";
-import MovieResponse from "./MovieInterface";
+import { Movie } from "./MovieInterface";
 
 function Home() {
     const [date, getDate] = useState('')
+    const [movies, getMovies] = useState<Movie[]>([])
+    console.log('movies:', movies)
     return (
         <div>
             <Link to='/favorite-bacon'>Favorite Bacon</Link>
@@ -12,6 +14,9 @@ function Home() {
             <form className='searchTitle' onSubmit={(e) => {
                 e.preventDefault()
                 GetMovies(date)
+                    .then((response) => {
+                        getMovies(response)
+                    })
             }}>
                 <label>
                     <strong> Title: </strong>
@@ -36,8 +41,15 @@ function Home() {
                     />
                 </label>
                 <button type='submit'>Search</button>
-                <button type='submit'>Bacon Me</button>
+                {/* <button type='submit'>Bacon Me</button> */}
             </form>
+            <div>
+                <ul>
+                    {movies.map((movie, i) => {
+                        return <li>{movie.title} - {movie.release_date}</li>
+                    })}
+                </ul>
+            </div>
         </div>
     )
 };
