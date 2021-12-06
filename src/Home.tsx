@@ -4,7 +4,7 @@ import { GetMovies, GenreSearch, TitleSearch} from "./GetMovies";
 import { Movie } from "./MovieInterface";
 import Genre from "./GenreInterface";
 
-function Home() {
+function Home({ addFavorite }: { addFavorite: (movie: Movie) => void }) {
     const [date, getDate] = useState('')
     const [titles, getTitles] = useState('')
     const [rating, getRating] = useState('')
@@ -99,7 +99,13 @@ function Home() {
                 per search criteria */}
                 <ul>
                     {movies.map((movie, i) => {
-                        return <li>{movie.title} - {movie.release_date} - {movie.vote_average} - <button>Add to my favorites!</button></li>
+                        return <li>
+                            {movie.title} - 
+                            {movie.release_date} - 
+                            {movie.vote_average} - 
+                            <button type='submit' onClick={() => {
+                                addFavorite(movie)
+                            }}>Add to my favorites!</button></li>
                     })}
                 </ul>
             </div>
