@@ -99,7 +99,7 @@ function Home() {
                 per search criteria */}
                 <ul>
                     {movies.map((movie, i) => {
-                        return <li>{movie.title} - {movie.release_date} - {movie.vote_average}</li>
+                        return <li>{movie.title} - {movie.release_date} - {movie.vote_average} - <button>Add to my favorites!</button></li>
                     })}
                 </ul>
             </div>
