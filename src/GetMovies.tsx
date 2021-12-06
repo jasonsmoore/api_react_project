@@ -7,10 +7,10 @@ const movieApiKey : string = process.env.REACT_APP_MOVIE_API_CREDS || '';
 // general function for getting all movies with KB
 // as well as getting year/date
 
-export function GetMovies(year?: string, genre?: string) : Promise<Movie[]>{
+export function GetMovies(year?: string, genre?: string, rating?: string) : Promise<Movie[]>{
     console.log(genre)
     return axios
-        .get(`https://api.themoviedb.org/3/discover/movie?api_key=${movieApiKey}&language=en-US&sort_by=release_date.desc&include_adult=false&include_video=false&page=1&with_people=4724&primary_release_year=${year}&with_genres=${genre}`)
+        .get(`https://api.themoviedb.org/3/discover/movie?api_key=${movieApiKey}&language=en-US&sort_by=release_date.desc&include_adult=false&include_video=false&page=1&with_people=4724&primary_release_year=${year}&with_genres=${genre}&vote_average.gte=${rating}`)
         .then(response => {console.log(response.data.results)
             return response.data.results
     })

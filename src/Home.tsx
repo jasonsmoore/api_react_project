@@ -7,6 +7,7 @@ import Genre from "./GenreInterface";
 function Home() {
     const [date, getDate] = useState('')
     const [titles, getTitles] = useState('')
+    const [rating, getRating] = useState('')
     const [movies, getMovies] = useState<Movie[]>([])
     const [genres, getGenre] = useState<Genre[]>([])
     const [selectGenre, setSelectGenre] = useState('')
@@ -22,7 +23,7 @@ function Home() {
         <div>
             <Link to='/favorite-bacon'>Favorite Bacon</Link>
             <label>
-                    <strong> Specific Bacon: </strong>
+                    <strong> Search Any Movie: </strong>
                     <form className='searchTitle' onSubmit={(e) => {
                     e.preventDefault()
                     console.log(selectGenre)
@@ -37,14 +38,14 @@ function Home() {
                             onChange={e => getTitles(e.target.value)}
                             name='title'
                         />
-                        <button>Bacon Me</button>
+                        <button>Search</button>
                     </form>
             </label>
             <h1>Bacon Search!</h1>
             <form className='searchTitle' onSubmit={(e) => {
                 e.preventDefault()
                 console.log(selectGenre)
-                GetMovies(date, selectGenre)
+                GetMovies(date, selectGenre, rating)
                     .then((response) => {
                         getMovies(response)
                     })
@@ -82,6 +83,14 @@ function Home() {
                         name='date'
                     />
                 </label>
+                <label>
+                    <strong> Rating: </strong>
+                    <input
+                        value={rating}
+                        onChange={e =>{getRating(e.target.value)}}
+                        name='rating'
+                    />
+                </label>
                 <button type='submit'>Search</button>
                 {/* <button type='submit'>Bacon Me</button> */}
             </form>
@@ -90,7 +99,7 @@ function Home() {
                 per search criteria */}
                 <ul>
                     {movies.map((movie, i) => {
-                        return <li>{movie.title} - {movie.release_date}</li>
+                        return <li>{movie.title} - {movie.release_date} - {movie.vote_average}</li>
                     })}
                 </ul>
             </div>
