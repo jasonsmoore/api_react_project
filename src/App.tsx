@@ -21,7 +21,7 @@ function App() {
         <h1>Bacon Time!</h1>
         <Routes>
           <Route path='/' element={<Home addFavorite={addFavorite}/>} />
-          <Route path='/favorite-bacon' element={<Favorites />} />
+          <Route path='/favorite-bacon' element={<Favorites favorite={favorite}/>} />
           <Route path='/movie-info' element={<MovieInfo />} />
         </Routes>
       </div>
