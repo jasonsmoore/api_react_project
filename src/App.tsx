@@ -15,14 +15,23 @@ function App() {
     })
   }
 
+  const handleDelete = (i: number) => {
+    setFavorite((prevFavorite) => {
+      return [
+        ...prevFavorite.slice(0, i),
+        ...prevFavorite.slice(i + 1),
+      ];
+    });
+  };
+
   return (
     <Router>
       <div className="App">
         <h1>Bacon Time!</h1>
         <Routes>
           <Route path='/' element={<Home addFavorite={addFavorite}/>} />
-          <Route path='/favorite-bacon' element={<Favorites favorite={favorite}/>} />
-          <Route path='/movie-info' element={<MovieInfo />} />
+          <Route path='/favorite-bacon' element={<Favorites favorite={favorite} handleDelete={handleDelete}/>} />
+          <Route path='/movie-info/:movieId' element={<MovieInfo favorite={favorite}/>} />
         </Routes>
       </div>
     </Router>
