@@ -1,0 +1,45 @@
+
+
+.App {
+    height: 100vh;
+    width: 100%;
+    margin: 0px;
+    background-color: cadetblue;
+    background-image: url("assets/kevin.png");
+    color: hsl(14, 82%, 48%);
+}
+
+a {
+    color: hsl(14, 82%, 48%);
+}
+
+input, select {
+    opacity: 30%;
+}
+
+@media (max-width: 600px) {
+    .App {
+        margin: 0px;
+        background-image: url("assets/kevin4.jpg");
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .searchTitle {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+
+    button {
+        align-self: center;
+    }
+}

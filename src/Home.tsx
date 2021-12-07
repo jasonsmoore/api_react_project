@@ -19,28 +19,8 @@ function Home({ addFavorite }: { addFavorite: (movie: Movie) => void }) {
   }, []);
 
   return (
-    <div>
-      <label>
-        <strong> Search Any Movie: </strong>
-        <form
-          className="searchTitle"
-          onSubmit={(e) => {
-            e.preventDefault();
-            console.log(selectGenre);
-            TitleSearch(titles).then((response) => {
-              getMovies(response);
-            });
-            getDate("");
-          }}
-        >
-          <input
-            value={titles}
-            onChange={(e) => getTitles(e.target.value)}
-            name="title"
-          />
-          <button>Search</button>
-        </form>
-      </label>
+    <div id="body">
+      
       <h1>Bacon Search!</h1>
       <form
         className="searchTitle"
@@ -124,6 +104,27 @@ function Home({ addFavorite }: { addFavorite: (movie: Movie) => void }) {
         </ul>
         <Link to="/favorite-bacon">Favorites</Link>
       </div>
+      <label>
+        <strong> Search Non-Bacon Movies: </strong>
+        <form
+          className="searchTitle"
+          onSubmit={(e) => {
+            e.preventDefault();
+            console.log(selectGenre);
+            TitleSearch(titles).then((response) => {
+              getMovies(response);
+            });
+            getDate("");
+          }}
+        >
+          <input
+            value={titles}
+            onChange={(e) => getTitles(e.target.value)}
+            name="title"
+          />
+          <button>Search</button>
+        </form>
+      </label>
     </div>
   );
 }

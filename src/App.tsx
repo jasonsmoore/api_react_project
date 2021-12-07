@@ -27,7 +27,11 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <h1>Bacon Time!</h1>
+        <header>
+        <h1>KBDB</h1>
+        <h2>The Kevin Bacon Database</h2>
+        <h3>Kevin Bacon has appeared in at least 61 movies. Search for your favorites below.</h3>
+        </header>
         <Routes>
           <Route path='/' element={<Home addFavorite={addFavorite}/>} />
           <Route path='/favorite-bacon' element={<Favorites favorite={favorite} handleDelete={handleDelete}/>} />
