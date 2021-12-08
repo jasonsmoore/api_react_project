@@ -4,8 +4,8 @@ import { Movie } from "./MovieInterface";
 function Favorites({ favorite, handleDelete } : { handleDelete: (i: number) => void, favorite: Movie[] }) {
   return (
     <div>
-      <Link to="/">Home</Link>
-      <h1>Favorite Bacon!</h1>
+      
+      <h1>My Favorite Kevins</h1>
       <ul>
         {favorite.map((movie, i) => {
           return (
@@ -22,6 +22,7 @@ function Favorites({ favorite, handleDelete } : { handleDelete: (i: number) => v
           );
         })}
       </ul>
+      <Link to="/">Return Home</Link>
     </div>
   );
 }

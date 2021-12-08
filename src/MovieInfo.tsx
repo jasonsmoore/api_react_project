@@ -21,7 +21,7 @@ function MovieInfo({ favorite} : {favorite: Movie[] }) {
             <p>{movie.release_date}</p>
             <p>Average rating: {movie.vote_average}</p>
             <p>{movie.overview}</p>
-            <Link to='/'>Home</Link> <Link to='/favorite-bacon'>Favorites</Link>
+            <Link to='/'> Return Home</Link> <Link to='/favorite-bacon'>Return to Favorites</Link>
 
         </div>
     )

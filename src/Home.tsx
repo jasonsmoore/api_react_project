@@ -21,7 +21,7 @@ function Home({ addFavorite }: { addFavorite: (movie: Movie) => void }) {
   return (
     <div id="body">
       
-      <h1>Bacon Search!</h1>
+      <h2>Find a Kevin:</h2>
       <form
         className="searchTitle"
         onSubmit={(e) => {
@@ -82,7 +82,7 @@ function Home({ addFavorite }: { addFavorite: (movie: Movie) => void }) {
         <button type="submit">Search</button>
         {/* <button type='submit'>Bacon Me</button> */}
       </form>
-      <div>
+      <div id="results">
         {/* displays list of movies
                 per search criteria */}
         <ul>
@@ -96,13 +96,17 @@ function Home({ addFavorite }: { addFavorite: (movie: Movie) => void }) {
                     addFavorite(movie);
                   }}
                 >
-                  Add to my favorites!
+                  Add to My Favorites
                 </button>
               </li>
             );
           })}
         </ul>
-        <Link to="/favorite-bacon">Favorites</Link>
+        <Link to="/favorite-bacon">View My Favorites</Link>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
       </div>
       <label>
         <strong> Search Non-Bacon Movies: </strong>
