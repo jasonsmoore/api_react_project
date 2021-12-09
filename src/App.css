@@ -4,26 +4,44 @@
   box-sizing: border-box;
 }
 
+html {
+    background-image: url("assets/kevin.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+#background {
+    padding: 1rem;
+    z-index: 2;
+    position: relative;
+    min-height: 100px;
+    width: 100%;
+    background-color: rgba(211, 211, 211, .2);
+    
+}
+
 .App {
-  height: 100vh;
-  width: 100%;
+    position: absolute;
+  display: block;
+  overflow: auto;
   padding: 25px;
-  background-color: black;
-  background-image: url("assets/kevin.png");
-  color: rgb(223, 220, 22);
+  
+  color: black;
   font-family: sans-serif;
-  -webkit-text-stroke: 0.33px black;
+  /* -webkit-text-stroke: 0.33px black; */
+  max-width: 70%;
 }
 
 header {
-    margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 
 a {
-  color: rgb(223, 220, 22);
+  color: black;
   font-size: 25px;
   margin: 0 10px;
 }
+
 
 input,
 select {
@@ -35,12 +53,22 @@ select {
 }
 
 #tagline {
-  color: rgb(223, 220, 22);
   margin: 0;
+}
+
+#description {
+  margin-bottom: 50px;
+  font-size: 20px;
 }
 
 #results {
   margin-bottom: 50px;
+}
+
+#list-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 button {
@@ -68,16 +96,25 @@ button:active {
   left: 5px;
 }
 
-@media (min-width: 768px) {
-}
-
 @media (max-width: 768px) {
+
+    html {
+        background-image: url("assets/kevin5.jpg");
+    }
+
   .App {
     margin: 0px;
-    background-image: url("assets/kevin4.jpg");
+    
     display: flex;
     flex-direction: column;
     align-items: center;
+    /* color: red; */
+    max-width: 100%;
+    /* -webkit-text-stroke: 0.33px ; */
+  }
+
+  #description {
+    font-size: 1rem;
   }
 
   #body {

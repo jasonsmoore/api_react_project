@@ -20,7 +20,11 @@ function Home({ addFavorite }: { addFavorite: (movie: Movie) => void }) {
 
   return (
     <div id="body">
-      
+      <h4 id="description">
+        Kevin Bacon has appeared in at least 61 movies. Search for your favorite
+        films and add them to your list below.
+      </h4>
+
       <h2>Find a Kevin:</h2>
       <form
         className="searchTitle"
@@ -30,7 +34,7 @@ function Home({ addFavorite }: { addFavorite: (movie: Movie) => void }) {
           GetMovies(date, selectGenre, rating).then((response) => {
             getMovies(response);
           });
-        //   getDate("");
+          //   getDate("");
         }}
       >
         <label>
@@ -85,11 +89,11 @@ function Home({ addFavorite }: { addFavorite: (movie: Movie) => void }) {
       <div id="results">
         {/* displays list of movies
                 per search criteria */}
-        <ul>
+        <ul id="list-item">
           {movies.map((movie, i) => {
             return (
               <li>
-                {movie.title} -{movie.release_date} -{movie.vote_average} -
+                <strong>Title: </strong>{movie.title} | <strong>Release Date: </strong>{movie.release_date} | <strong>Average Rating: </strong>{movie.vote_average} 
                 <button
                   type="submit"
                   onClick={() => {
