@@ -8,7 +8,8 @@ function MovieInfo({ favorite} : {favorite: Movie[] }) {
 
     let id = parseInt(useParams().movieId as string);
     let movie = favorite[id];
-
+    console.log(id)
+    console.log(useParams())
     if(!movie) {
         return(
             <p>no.</p>

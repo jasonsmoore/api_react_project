@@ -79,7 +79,7 @@ function Home({ addFavorite }: { addFavorite: (movie: Movie) => void }) {
             name="rating"
           />
         </label>
-        <button type="submit">Search</button>
+        <button type="submit" id='search'>Search</button>
         {/* <button type='submit'>Bacon Me</button> */}
       </form>
       <div id="results">
