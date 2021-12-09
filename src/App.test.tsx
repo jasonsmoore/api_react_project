@@ -34,7 +34,7 @@ test('renders movie info', () => {
       "vote_count": 3018
     }
   ]
-  jest.spyOn(Router, 'useParams').mockReturnValue({ movieId: '49524' })
+  jest.spyOn(Router, 'useParams').mockReturnValue({ movieId: '0' })
   render(<BrowserRouter><MovieInfo favorite={favorite} /></BrowserRouter>);
   const linkElement = screen.getByText(/recently slain cop/);
   expect(linkElement).toBeInTheDocument();

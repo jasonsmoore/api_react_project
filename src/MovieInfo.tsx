@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 function MovieInfo({ favorite }: { favorite: Movie[] }) {
     let id = parseInt(useParams().movieId as string);
-    let movie = favorite.find((movie) => movie.id === id);
+    let movie = favorite[id];
     console.log(id)
     console.log(favorite)
 
