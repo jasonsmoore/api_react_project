@@ -51,3 +51,27 @@ test('render button', () => {
   const button = screen.getAllByRole('button', { name: 'Search' });
   expect(button[0]).toBeInTheDocument();
 })
+
+test('render input Release Date', () => {
+  render(<App />);
+  const input = screen.getByLabelText('Release Date:');
+  expect(input).toBeInTheDocument();
+})
+
+test('render input search non-bacon movies', () => {
+  render(<App />);
+  const input = screen.getByLabelText('Search Non-Bacon Movies:');
+  expect(input).toBeInTheDocument();
+})
+
+test('render input search non-bacon movies', () => {
+  render(<App />);
+  const input = screen.getByLabelText('Rating:');
+  expect(input).toBeInTheDocument();
+})
+
+// test('render button for favorites', () => {
+//   render(<App />);
+//   const button = screen.getByRole('button', { name: 'Add to My Favorites' });
+//   expect(button).toBeInTheDocument();
+// })

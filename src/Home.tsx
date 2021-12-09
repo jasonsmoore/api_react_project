@@ -108,8 +108,6 @@ function Home({ addFavorite }: { addFavorite: (movie: Movie) => void }) {
         <br></br>
         <br></br>
       </div>
-      <label>
-        <strong> Search Non-Bacon Movies: </strong>
         <form
           className="searchTitle"
           onSubmit={(e) => {
@@ -121,14 +119,16 @@ function Home({ addFavorite }: { addFavorite: (movie: Movie) => void }) {
             getDate("");
           }}
         >
+        <label>
+          <strong> Search Non-Bacon Movies: </strong>
           <input
             value={titles}
             onChange={(e) => getTitles(e.target.value)}
             name="title"
           />
+        </label>
           <button>Search</button>
         </form>
-      </label>
     </div>
   );
 }
