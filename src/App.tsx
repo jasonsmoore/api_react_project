@@ -22,7 +22,7 @@ function App() {
   };
 
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <div className="App">
         <div id="background">
           <header>
@@ -30,7 +30,7 @@ function App() {
             <h2 id="tagline">The Kevin Bacon Database</h2>
           </header>
           <Routes>
-            <Route path="*" element={<Home addFavorite={addFavorite} />} />
+            <Route path="/" element={<Home addFavorite={addFavorite} />} />
             <Route
               path="/favorite-bacon"
               element={
