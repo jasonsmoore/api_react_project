@@ -48,10 +48,7 @@ function Home({ addFavorite }: { addFavorite: (movie: Movie) => void }) {
             id="genres"
             name="genres"
             onChange={(e) => {
-              const genreId =
-                genres
-                  .find((genre) => genre.name === e.target.value)
-                  ?.id.toString() || "";
+            
               console.log(e.target.value);
               setSelectGenre(e.target.value);
             }}

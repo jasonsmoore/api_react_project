@@ -1,5 +1,4 @@
 import { useParams } from "react-router";
-import Favorites from "./Favorites";
 import { Movie } from "./MovieInterface";
 import { Link } from "react-router-dom";
 
