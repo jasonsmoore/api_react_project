@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/api_react_project/static/css/main.76f75ee8.chunk.css",
+    "main.css": "/api_react_project/static/css/main.0839cc61.chunk.css",
     "main.js": "/api_react_project/static/js/main.f7e5a402.chunk.js",
     "main.js.map": "/api_react_project/static/js/main.f7e5a402.chunk.js.map",
     "runtime-main.js": "/api_react_project/static/js/runtime-main.bce54756.js",
@@ -10,14 +10,14 @@
     "static/js/3.f75e446e.chunk.js": "/api_react_project/static/js/3.f75e446e.chunk.js",
     "static/js/3.f75e446e.chunk.js.map": "/api_react_project/static/js/3.f75e446e.chunk.js.map",
     "index.html": "/api_react_project/index.html",
-    "static/css/main.76f75ee8.chunk.css.map": "/api_react_project/static/css/main.76f75ee8.chunk.css.map",
+    "static/css/main.0839cc61.chunk.css.map": "/api_react_project/static/css/main.0839cc61.chunk.css.map",
     "static/js/2.cd211e04.chunk.js.LICENSE.txt": "/api_react_project/static/js/2.cd211e04.chunk.js.LICENSE.txt",
     "static/media/App.css": "/api_react_project/static/media/kevin5.38fbf24e.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.bce54756.js",
     "static/js/2.cd211e04.chunk.js",
-    "static/css/main.76f75ee8.chunk.css",
+    "static/css/main.0839cc61.chunk.css",
     "static/js/main.f7e5a402.chunk.js"
   ]
 }
